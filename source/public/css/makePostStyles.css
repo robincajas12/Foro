@@ -1,0 +1,9 @@
+#make-post__container{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    border-bottom: 5px solid #ccc;
+}

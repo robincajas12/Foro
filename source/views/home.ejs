@@ -1,0 +1,41 @@
+<%- include('./partials/head')-%> 
+<%- include('./partials/header')-%> 
+<div class="row container-fluid">
+    <div class="col-1">
+        <ul>
+            <li>aaaaaa</li>
+            <li>aaaaaa</li>
+            <li>aaaaaa</li>
+            <li>aaaaaa</li>
+            <li>aaaaaa</li>
+        </ul>
+    </div>
+    <div class="col-11 container-fluid d-flex align-items-center flex-column">
+        <div id="make-post__container" class="container align-items-center flex-column">
+            <div class="container py-3">¿Qué está pasando?</div>
+            <form class="container">
+                <div class="">
+                    <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" name="title">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Contenido</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn mb-3 btn-success">Publicar</button>
+            </form>
+        </div>
+        <div class="container-fluid fluid d-flex align-items-center flex-column">
+            <% posts.forEach((post)=>{ %>
+                <div class="card w-75">
+                    <div class="card-body">
+                        <p class="card-title"><%=post.title %></p>
+                        <p class="card-text"><%=post.content %></p>
+                        <button class="btn" type="button">like</button>
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+    </div>
+</div>
+<%- include('./partials/footer')-%> 
