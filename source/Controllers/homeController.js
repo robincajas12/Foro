@@ -1,7 +1,7 @@
 const {isMobile} = require('../deviceClient');
+const {Discussion} = require('../mongodb/index');
 const homeView = (req,res) => {
-    res.render('home', 
-    {
+    const parameters = {
         css: 'makePostStyles',
         title: 'Home', 
         isMobile: isMobile(req),
@@ -12,8 +12,11 @@ const homeView = (req,res) => {
                 _id: 1
             }
         ]
-        
-    });
+    }
+    Discussion.find((err, data)=>{
+        parameters.discussions = data;  
+        res.render('home', parameters);
+    })
 }
 
 module.exports = {
