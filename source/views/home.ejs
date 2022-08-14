@@ -1,15 +1,17 @@
 <%- include('./partials/head')-%> 
 <%- include('./partials/header')-%> 
 <div class="row container-fluid">
-    <div class="col-1">
-        <ul>
-            <li>aaaaaa</li>
-            <li>aaaaaa</li>
-            <li>aaaaaa</li>
-            <li>aaaaaa</li>
-            <li>aaaaaa</li>
-        </ul>
-    </div>
+    <% if(!isMobile) {%> 
+        <div class="col-1">
+            <ul>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+            </ul>
+        </div>
+    <%}%>
     <div class="col-11 container-fluid d-flex align-items-center flex-column">
         <div id="make-post__container" class="container align-items-center flex-column">
             <div class="container py-3">¿Qué está pasando?</div>

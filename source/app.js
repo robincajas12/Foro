@@ -15,5 +15,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(loginRouter);
 app.use(homeRouter);
 app.use(indexRouter);
-
 app.listen(3000, ()=> console.log('server is running'));
